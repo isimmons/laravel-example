@@ -31,7 +31,6 @@ class TestCase extends Orchestra
 
         Schema::dropAllTables();
 
-
         $migration = include __DIR__.'/../database/migrations/create_laravel-example_table.php';
         $migration->up();
 

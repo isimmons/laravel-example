@@ -11,11 +11,11 @@ it('can return the uppercased value of a name', function () {
 });
 
 it('can use json queries', function () {
-    MyModel::factory()->create(['name' => 'John', 'options' =>  json_encode(['languages' => 'en'])]);
+    MyModel::factory()->create(['name' => 'John', 'options' => json_encode(['languages' => 'en'])]);
 
     $models = DB::table('my_models')
-    ->whereJsonContains('options->languages', 'en')
-    ->get();
+        ->whereJsonContains('options->languages', 'en')
+        ->get();
 
     expect($models)->toHaveCount(1);
 });
