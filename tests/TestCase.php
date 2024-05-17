@@ -3,6 +3,7 @@
 namespace Isimmons\Example\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Schema;
 use Isimmons\Example\ExampleServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -17,20 +18,22 @@ class TestCase extends Orchestra
         );
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             ExampleServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-example_table.php.stub';
+        Schema::dropAllTables();
+
+
+        $migration = include __DIR__.'/../database/migrations/create_laravel-example_table.php';
         $migration->up();
-        */
+
     }
 }
