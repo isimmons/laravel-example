@@ -1,6 +1,7 @@
 # This is an example package.
 
->[!NOTE] Hello, there is one caveat to using tabs
+>[!NOTE]
+> Hello, there is one caveat to using tabs
 > 
 > Here is some more info
 > 
