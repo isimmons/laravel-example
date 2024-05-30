@@ -1,10 +1,11 @@
 # This is an example package.
 
->**NOTE:**
+>[!NOTE] Hello, there is one caveat to using tabs
 > 
->A note highlighting important information and testing if this style tag gets ignored in github
->
-{style="note"}
+> Here is some more info
+> 
+
+[comment]: <> (Hello this is a comment)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/isimmons/laravel-example.svg?style=flat-square)](https://packagist.org/packages/isimmons/laravel-example)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/isimmons/laravel-example/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/isimmons/laravel-example/actions?query=workflow%3Arun-tests+branch%3Amain)
